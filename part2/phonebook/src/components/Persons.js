@@ -1,10 +1,15 @@
 import Person from "./Person";
 
-const Persons = ({persons, query }) => (
+const Persons = ({persons, query, handleRemovePerson }) => (
     <>
         {persons
         .filter(person => person.name.toLowerCase().includes(query))
-        .map(({name, number}) => <Person name={name} number={number} /> ) }
+        .map(({name, number, id}) =>
+        <Person 
+        name={name} 
+        number={number} 
+        handleRemovePerson={handleRemovePerson(id, name)}
+        /> ) }
     </>
 )
 
