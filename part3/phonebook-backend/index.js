@@ -1,7 +1,16 @@
+require('dotenv').config()
 var express = require('express')
 var morgan = require('morgan')
+const mongoose = require('mongoose')
+
+const persons = require('./models/persons')
+const Person = mongoose.model('Person', phonebookSchema)
 
 const app = express()
+const cors = require('cors')
+
+app.use(cors())
+app.use(express.static('build'))
 
 morgan.token('body', (request, response) =>
  request.method === `POST` ? JSON.stringify(request.body) : ''

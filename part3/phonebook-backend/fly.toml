@@ -1,18 +1,18 @@
-# fly.toml app configuration file generated for shy-thunder-3574 on 2023-10-25T12:14:14-04:00
+# fly.toml app configuration file generated for rough-butterfly-4092 on 2023-11-01T02:08:48-04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "shy-thunder-3574"
-primary_region = "atl"
+app = "rough-butterfly-4092"
+primary_region = "bos"
 
 [build]
 
 [env]
-  PORT = "3000"
+  PORT = "3001"
 
 [http_service]
-  internal_port = 3000
+  internal_port = 3001
   force_https = true
   auto_stop_machines = true
   auto_start_machines = true
